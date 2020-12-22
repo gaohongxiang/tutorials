@@ -1,2 +1,2 @@
 # tutorials
-Software development related tutorials
+编程相关教程
