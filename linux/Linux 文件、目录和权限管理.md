@@ -128,7 +128,7 @@ Linux 下的每一个文件及目录都有 拥有者 、 群组 、 其他人 �
 `-rw-r--r-- 1 root root 32 9月  18 09:32 test.txt`
 `drwxrwxr-x. 2 test test  149 4月  22 19:20 script`
 
-![文件及目录属性](http://pcen3n3o2.bkt.clouddn.com/%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%B1%9E%E6%80%A7.png)
+![文件及目录属性_2020_12_21](https://gitee.com/ghongxiang/picture/raw/master/编程/linux/文件目录属性_2020_12_21.png)
 
 #### 第1组 `-rw-r--r--.`
 
