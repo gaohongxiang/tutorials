@@ -1,6 +1,6 @@
 ## linux目录结构
 
-![Linux目录结构](http://pcen3n3o2.bkt.clouddn.com/linux%E7%B3%BB%E7%BB%9F%E7%9B%AE%E5%BD%95.png)
+![Linux目录结构_2020_12_21](https://gitee.com/ghongxiang/picture/raw/master/编程/linux/linux系统目录_2020_12_21.png)
 
 #### /root
 

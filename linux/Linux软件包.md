@@ -92,7 +92,7 @@ package操作的对象。
 
 **yum客户端安装程序流程**
 
-![yum客户端安装程序流程](http://pcen3n3o2.bkt.clouddn.com/yum%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B.jpg)
+![yum客户端安装程序流程_2020_12_21](https://gitee.com/ghongxiang/picture/raw/master/编程/linux/yum客户端安装程序流程_2020_12_21.jpg)
 
 
 
