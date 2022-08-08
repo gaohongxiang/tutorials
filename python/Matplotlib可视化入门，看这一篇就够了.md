@@ -392,6 +392,10 @@ fig.set_facecolor('white')
 ax.set_facecolor('white')
 ```
 
+#### 添加文本
+
+[Python数据可视化：往图表中添加文本就是这么简单](https://zhuanlan.zhihu.com/p/234971599?utm_source=wechat_session)
+
 #### 保存图像 `fig.savefig`
 
 保存图像的时候可以设置分辨率
