@@ -43,7 +43,7 @@ Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是�
 #### 资产通过Sushiswap从OP跨回来
 >如果想交互下面提到的farming的话，就先不要跨回来啦。
 
-选择xswap，走跨链。这个底层也是用的layerzero协议。
+进入 [sushi官网](https://www.sushi.com/xswap)，选择`xswap`，走跨链。这个底层也是用的layerzero协议。
 ![sushi](https://s2.loli.net/2022/10/29/s1wKInhS2uZWRGf.png)
 
 ### 3、farming交互
