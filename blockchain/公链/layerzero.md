@@ -74,6 +74,7 @@ Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是�
 Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上的“全链NFT”。总量7710个。如果想通过它博空投，只能去二级市场购买。目前地板价0.12ETH（2022/10/29）。根据推特的信息展示，小幽灵将会发布一款小游戏。不清楚是否会对NFT持有者进行空投。
 - [Gh0stly Gh0sts 推特](https://twitter.com/gh0stlygh0sts)
 - [Gh0stly Gh0sts opensea](https://opensea.io/zh-CN/collection/gh0stlygh0sts)
+- [那个可以跨链的Gh0stlyGh0sts会成为下一个Azuki吗？](https://jason.mirror.xyz/3dINEPmJ0UqpvUtvwgFYZ33xkHdmxTQRdhDppexsWLg)
 
 ![Gh0stly Gh0sts](https://s2.loli.net/2022/10/29/Isa9ro6CLph3W5t.png)
 
