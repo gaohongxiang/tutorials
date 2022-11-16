@@ -89,8 +89,9 @@ mint nft 时需要自己填写cid，可以用pinata上传图片获得cid
 
 ## gitcoin捐赠通过zksync1.0付款
 
-- https://gitcoin.co/
+- https://gitcoin.co/grants/
 
 gitcoin需要使用github登陆，没有github先注册：https://github.com/
 
-![](https://s2.loli.net/2022/11/15/a7clQGFMAd1PTEe.jpg)
+![](https://s2.loli.net/2022/11/16/8JreQfHh3MK1snA.jpg)
+![](https://s2.loli.net/2022/11/16/7iReV5DwJapZzTA.jpg)
