@@ -12,56 +12,21 @@ layerzero官方github提到了他们的代币名称 $ZRO
 
 这是一个很有潜力的项目，并没有在社区透露太多信息。如果做成了可能会改变跨链生态的格局。这样的项目如果有空投的话，一定是很不错的，值得挑一些重点项目来交互。
 
-## 一、Stargate、sushi等协议交互
+## 一、跨链
 
-Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是全链DeFi的核心。它是使用layerzero协议的第一个项目，官方背景，必交互。sushi的xswap跨链底层也是用的layerzero协议。
+### 使用bungee和stargate在eth系之间跨链
 
-### 1、跨链转移资产
-eth系资产桥接，可以用stargate的Transfer功能桥接过去，再用sushi、Hashflow等支持layerzero的协议桥接回来。这样俩个协议都交互了。同时，现在有个OP奥德赛活动，只要`通过其他链向op链转最少100usdc`，即可奖励一个nft，一举三得。
+Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是全链DeFi的核心。它是使用layerzero协议的第一个项目，官方背景，必交互。.bungee.exchange是一个跨链聚合器，除了常规跨链，还有一个`Refuel`功能，专门跨gas用的，新地址一般都没有gas，这个功能非常实用。
 
-#### 资产通过stargate从其他链桥接到OP
-打开 [stargate Transfer](https://stargate.finance/transfer)，From部分选你有资产同时又便宜的链，token目前支持USDT、USDC。比如我选的bsc链，转USDT。To的部分链必须选OP链，token必须选USDC。然后等待转过去即可。
+>方案：使用bungee跨链聚合器，跨链时选择stargate跨链桥，stargate建立在layerzero之上。这样既交互了bungee，又交互了layerzero（stargate已经发币），一鱼两吃。
 
-![transfer](https://s2.loli.net/2022/10/29/Ofr89PTWumoe4E5.png)
+- bungee网址：https://www.bungee.exchange/
 
-#### 领取OP活动nft
-过一个小时左右去 [galxe](https://galxe.com/Optimism/campaign/GC6HiUtSAs) 领nft
+![](https://s2.loli.net/2022/11/16/zsGB2VFHjwTYgRd.png)
 
-![op_stargate](https://s2.loli.net/2022/10/29/ZQFciKkyeMpLgn6.png)
+注：2022/09/21 02:00 - 2023/01/18 02:00 GMT+09:00有个Optimism Quests活动，stargate也在其中，只要在optimism跨链满100u即可。两个项目可以同时参与。
 
-比较可惜的是，stargate官方自己还出了一个nft活动，做完上述任务可以领。但是10.3号已经结束了。就是下面这个nft，领了nft可以使用转移功能，做交互，不知道以后还会不会有。
-网址也放在这了：[galxestargatoronft](https://www.galxestargatoronft.com/mint)
-
-![nft](https://s2.loli.net/2022/10/29/kJmjOQlNw3bHs2a.png)
-
-#### 资产通过支持layerzero的其他协议从OP桥接回来
->如果想交互下面提到的farming的话，就先不要跨回来啦。
-
-支持layerzero的协议
-- [sushi官网](https://www.sushi.com/xswap)
-- [hashflow](https://app.hashflow.com/)
-
-下图展示了sushi跨链，其他协议类似
-![sushi](https://s2.loli.net/2022/10/29/s1wKInhS2uZWRGf.png)
-
-
-除了桥接，另外还可以交互stargate的其他功能，比如质押STG投票以及farming等
-
-### 2、成为 Stargate Finance 的 DAO 投票者
-
-首先购买Stargate Financ的代币STG（5个左右即可）。STG合约去 [coinmarketcap](https://coinmarketcap.com/currencies/stargate-finance/) 复制。目前六条链上都有，想在哪条链上买就选择对应链上的合约，拿到合约后去对应链上的dex去swap即可
-![STG](https://s2.loli.net/2022/10/29/gILb72YRrQ86ZyS.png)
-
-然后到 [Stargate Finance Staking](https://stargate.finance/stake) 选项卡质押你的STG代币。数量和期限自己定。
-![stake STG](https://s2.loli.net/2022/10/29/7Zx1gGNu3mj9KLE.png)
-质押了代币后，获得veSTG，就获得了投票权，成为Stargate Finance 的 DAO 投票者。定期对 [Stargate Finance 治理提案](https://snapshot.org/#/stgdao.eth) 进行投票（目前没有投票提案，时刻关注，有提案了就来投票，增加参与度）
-
-### 3、farming
-
-你也可以去 [农场](https://stargate.finance/farm) 体验一下，挖矿获得STG收益，目前稳定币收益年化在5-6%左右
-![farm](https://s2.loli.net/2022/10/29/gwQCvbeUW3VKLEx.png)
-
-## 二、使用theaptosbridge和liquidswap在以太坊和Aptos之间桥接
+## 使用theaptosbridge和liquidswap在以太坊和Aptos之间跨链
 
 - [LayerZero 的 Aptos 桥](https://medium.com/layerzero-official/the-aptos-bridge-by-layerzero-5117030afd4f)
 
@@ -74,18 +39,32 @@ eth系资产桥接，可以用stargate的Transfer功能桥接过去，再用sush
 我的方案是使用 theaptosbridge 将资产从eth系的链桥接到aptos链，然后使用 liquidswap 将资产再从aptos链桥接回来。
 
 ### 资产通过theaptosbridge从eth系链桥接到aptos链
-- 网址：[theaptosbridge](https://theaptosbridge.com/bridge)
+- theaptosbridge网址：https://theaptosbridge.com/bridge
 
 ![theaptosbridge](https://s2.loli.net/2022/10/30/F3ioM94ClVhRpwW.jpg)
 如上图所示，上面连接metamask钱包，下面连接aptos的Pontem Aptos Wallet钱包。选择要转移的币种（会自动显示你在哪条链上有资产），比如图中我的是在op上的usdc。下面选择aptos网络。选好之后transfer即可，需要等待较长时间。如果是第一次在aptos上与资产交互的话，需要手动claim资产，见上图。
 
 ### 资产通过liquidswap从aptos链桥接到eth系
-- 网址：[liquidswap](https://bridge.liquidswap.com/)
+- liquidswap网址：https://bridge.liquidswap.com/
 
 ![liquidswap从aptos桥接回eth系](https://s2.loli.net/2022/10/30/KyYCm3f6kdwRape.png)
 跟上一步类似，反向操作即可。需要注意的是，从aptos往外桥接需要3天时间才会到账！
 
-## 三、Gh0stly Gh0sts
+## 二、成为 Stargate Finance 的 DAO 投票者
+
+首先购买Stargate Financ的代币STG（5个左右即可）。STG合约去 [coinmarketcap](https://coinmarketcap.com/currencies/stargate-finance/) 复制。目前六条链上都有，想在哪条链上买就选择对应链上的合约，拿到合约后去对应链上的dex去swap即可
+![STG](https://s2.loli.net/2022/10/29/gILb72YRrQ86ZyS.png)
+
+然后到 [Stargate Finance Staking](https://stargate.finance/stake) 选项卡质押你的STG代币。数量和期限自己定。
+![stake STG](https://s2.loli.net/2022/10/29/7Zx1gGNu3mj9KLE.png)
+质押了代币后，获得veSTG，就获得了投票权，成为Stargate Finance 的 DAO 投票者。定期对 [Stargate Finance 治理提案](https://snapshot.org/#/stgdao.eth) 进行投票（目前没有投票提案，时刻关注，有提案了就来投票，增加参与度）
+
+## 三、farming
+
+你也可以去 [农场](https://stargate.finance/farm) 体验一下，挖矿获得STG收益，目前稳定币收益年化在5-6%左右
+![farm](https://s2.loli.net/2022/10/29/gwQCvbeUW3VKLEx.png)
+
+## 四、Gh0stly Gh0sts
 
 Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上的“全链NFT”。总量7710个。如果想通过它博空投，只能去二级市场购买。目前地板价0.12ETH（2022/10/29）。根据推特的信息展示，小幽灵将会发布一款小游戏。不清楚是否会对NFT持有者进行空投。
 - [Gh0stly Gh0sts 推特](https://twitter.com/gh0stlygh0sts)
@@ -94,7 +73,7 @@ Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上
 
 ![Gh0stly Gh0sts](https://s2.loli.net/2022/10/29/Isa9ro6CLph3W5t.png)
 
-## 四、USDC 零层桥接
+## 五、USDC 零层桥接
 这是官方一个测试demo，它是第 0 层的桥梁，我们可以使用它在 EVM 链之间发送 USDC。
 网址：[usdcdemo](https://usdcdemo.layerzero.network/bridge)
 
