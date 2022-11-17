@@ -2,6 +2,8 @@ zkSync——以太坊第二层零知识汇总扩展终极解决方案。采用zk
 
 目前zksync1.0主网于2020年6月15日在以太坊主网上上线。
 
+- 官网：https://zksync.io/
+
 zksync2.0主网分三个阶段，目前处于第一阶段。
 
 - 第一阶段Baby Alpha。2022年10月28号开启，预计持续一个月的时间，该阶段内网络将在没有任何外部应用程序开放使用的情况下运行，任何外部参与者无法使用，初始阶段仅用于压力测试和安全工作。
@@ -27,7 +29,8 @@ zksync2.0主网分三个阶段，目前处于第一阶段。
 
 ## 资产在以太坊主网与zksync1.0主网之间桥接
 
-建议走官方桥或者zigzag桥。二选一即可
+官方桥、zigzag桥、orbiter桥、layerswap桥
+其中orbiter支持在以太坊、zkSync、Arbitrum、Optimism、Polygon之间转移ETH和USDC、USDT、DAI
 
 ### 走官方桥
 
@@ -40,6 +43,13 @@ eth桥接到zksync1.0
 zksync1.0桥接到eth
 
 ![zksync1.0桥接到eth](https://s2.loli.net/2022/11/04/CFnON5QyPBRIXSE.jpg)
+
+### 走orbiter桥
+- https://www.orbiter.finance/
+
+orbiter支持在以太坊、zkSync、Arbitrum、Optimism、Polygon之间转移ETH和USDC、USDT、DAI。如果在其他二层有资产，用这个桥就非常方便了。
+
+![](https://s2.loli.net/2022/11/17/HJVrRoMw3Ki6lqL.png)
 
 ### 走zigzag桥
 
@@ -87,6 +97,10 @@ mint nft 时需要自己填写cid，可以用pinata上传图片获得cid
 
 ![transfer nft to eth](https://s2.loli.net/2022/11/04/zGxcn3twZmI7OWJ.jpg)
 
+### zknft
+这个和官方的功能重合？需要交互吗？
+- https://zknft.xyz/
+
 ## gitcoin捐赠通过zksync1.0付款
 
 - https://gitcoin.co/grants/
@@ -95,3 +109,26 @@ gitcoin需要使用github登陆，没有github先注册：https://github.com/
 
 ![](https://s2.loli.net/2022/11/16/8JreQfHh3MK1snA.jpg)
 ![](https://s2.loli.net/2022/11/16/7iReV5DwJapZzTA.jpg)
+
+## argent x钱包
+
+# zksync2.0测试网交互
+
+## 领水
+
+1. 直接在zksync2.0测试网官网水龙头领水 [https://portal.zksync.io/faucet](https://portal.zksync.io/faucet)
+2. 如果zk测试网没有eth，可以从以太坊goerli测试网领水（link：[https://faucets.chain.link/](https://faucets.chain.link/)、alchemy：[https://goerlifaucet.com/](https://goerlifaucet.com/)），然后走zksync2.0官方测试网跨链桥跨链到zksync [https://portal.zksync.io/bridge](https://portal.zksync.io/bridge)
+3. 如果以太坊goerli测试网也没eth，可以从bsc测试网[https://testnet.binance.org/faucet-smart](https://testnet.binance.org/faucet-smart) 领bnb，然后去zetachain [https://labs.zetachain.com/leaderboard](https://labs.zetachain.com/leaderboard) 跨链成goerli测试网eth ，然后走zksync2.0官方测试网跨链桥跨链 [https://portal.zksync.io/bridge](https://portal.zksync.io/bridge)
+4. 都不行的话去推特搜，碰运气
+
+## 应用交互
+
+官方列出的应用
+- https://matterlabs.notion.site/zkSync-2-0-Testnet-Applications-e38328bccda7472793024a25e26a1cac
+Onchaintrade
+
+社区整理应用
+- https://airtable.com/shrt6eK6LvZvUXvOL/tblkUgJJmbCiqr6Fl/viwbsQt9FsWjU64P1
+- https://aramz.super.site/alpha/zksync
+- https://m.defidaonews.com/article/6784356
+
