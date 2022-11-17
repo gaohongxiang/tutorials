@@ -97,10 +97,6 @@ mint nft 时需要自己填写cid，可以用pinata上传图片获得cid
 
 ![transfer nft to eth](https://s2.loli.net/2022/11/04/zGxcn3twZmI7OWJ.jpg)
 
-### zknft
-这个和官方的功能重合？需要交互吗？
-- https://zknft.xyz/
-
 ## gitcoin捐赠通过zksync1.0付款
 
 - https://gitcoin.co/grants/
@@ -125,7 +121,6 @@ gitcoin需要使用github登陆，没有github先注册：https://github.com/
 
 官方列出的应用
 - https://matterlabs.notion.site/zkSync-2-0-Testnet-Applications-e38328bccda7472793024a25e26a1cac
-Onchaintrade
 
 社区整理应用
 - https://airtable.com/shrt6eK6LvZvUXvOL/tblkUgJJmbCiqr6Fl/viwbsQt9FsWjU64P1
