@@ -50,7 +50,9 @@ Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是�
 ![liquidswap从aptos桥接回eth系](https://s2.loli.net/2022/10/30/KyYCm3f6kdwRape.png)
 跟上一步类似，反向操作即可。需要注意的是，从aptos往外桥接需要3天时间才会到账！
 
-## 二、成为 Stargate Finance 的 DAO 投票者
+## 二、stargate
+
+### 成为 Stargate Finance 的 DAO 投票者
 
 首先购买Stargate Financ的代币STG（5个左右即可）。STG合约去 [coinmarketcap](https://coinmarketcap.com/currencies/stargate-finance/) 复制。目前六条链上都有，想在哪条链上买就选择对应链上的合约，拿到合约后去对应链上的dex去swap即可
 ![STG](https://s2.loli.net/2022/10/29/gILb72YRrQ86ZyS.png)
@@ -59,21 +61,14 @@ Stargate FinanceStargate 是一个完全可组合的流动性传输协议，是�
 ![stake STG](https://s2.loli.net/2022/10/29/7Zx1gGNu3mj9KLE.png)
 质押了代币后，获得veSTG，就获得了投票权，成为Stargate Finance 的 DAO 投票者。定期对 [Stargate Finance 治理提案](https://snapshot.org/#/stgdao.eth) 进行投票（目前没有投票提案，时刻关注，有提案了就来投票，增加参与度）
 
-## 三、farming
+### farming
 
 你也可以去 [农场](https://stargate.finance/farm) 体验一下，挖矿获得STG收益，目前稳定币收益年化在5-6%左右
 ![farm](https://s2.loli.net/2022/10/29/gwQCvbeUW3VKLEx.png)
 
-## 四、Gh0stly Gh0sts
-
-Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上的“全链NFT”。总量7710个。如果想通过它博空投，只能去二级市场购买。目前地板价0.12ETH（2022/10/29）。根据推特的信息展示，小幽灵将会发布一款小游戏。不清楚是否会对NFT持有者进行空投。
-- [Gh0stly Gh0sts 推特](https://twitter.com/gh0stlygh0sts)
-- [Gh0stly Gh0sts opensea](https://opensea.io/zh-CN/collection/gh0stlygh0sts)
-- [那个可以跨链的Gh0stlyGh0sts会成为下一个Azuki吗？](https://jason.mirror.xyz/3dINEPmJ0UqpvUtvwgFYZ33xkHdmxTQRdhDppexsWLg)
-
 ![Gh0stly Gh0sts](https://s2.loli.net/2022/10/29/Isa9ro6CLph3W5t.png)
 
-## 五、USDC 零层桥接
+## 三、USDC 零层桥接
 这是官方一个测试demo，它是第 0 层的桥梁，我们可以使用它在 EVM 链之间发送 USDC。
 网址：[usdcdemo](https://usdcdemo.layerzero.network/bridge)
 
@@ -84,6 +79,18 @@ Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上
 
 `NOT ENOUGH NATIVE FAO GAS` 这个提示是因为gas不够，要再去领点。不知为啥，这个gas消耗巨高，大概0.15个左右
 ![usdcdemo](https://s2.loli.net/2022/10/29/qZ4KuNVwDycJSBd.png)
+
+## 四、Radiant
+Radiant 是一个部署在 Arbitrum 上基于 LayerZero/Stargate 的多链借贷项目。由于arbitrun和layerzero都未发币，所以我们交互radiant可以做到一鱼多吃。
+
+- 教程：https://mirror.xyz/0x891dDE39445f54bc6f1b73e89398f96e7851B4ba/LQ6H3D9-Ta-q6V2zmfFCt8zFwxQsKQGCNQZPITrCenQ
+
+## 五、Gh0stly Gh0sts
+
+Gh0stly Gh0sts（小幽灵）是LayerZero官方发布的第一个真正意义上的“全链NFT”。总量7710个。如果想通过它博空投，只能去二级市场购买。目前地板价0.12ETH（2022/10/29）。根据推特的信息展示，小幽灵将会发布一款小游戏。不清楚是否会对NFT持有者进行空投。
+- [Gh0stly Gh0sts 推特](https://twitter.com/gh0stlygh0sts)
+- [Gh0stly Gh0sts opensea](https://opensea.io/zh-CN/collection/gh0stlygh0sts)
+- [那个可以跨链的Gh0stlyGh0sts会成为下一个Azuki吗？](https://jason.mirror.xyz/3dINEPmJ0UqpvUtvwgFYZ33xkHdmxTQRdhDppexsWLg)
 
 ## 其他
 
