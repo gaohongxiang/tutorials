@@ -1,8 +1,15 @@
+# 混合代理端口
+mixed-port: 7890
+# Socks5 代理端口
+socks-port: 7891
+# HTTP 代理端口
+port: 7892
+
 # HTTP 端口
-port: 7890
+# port: 7890
 
 # SOCKS5 端口
-socks-port: 7891
+# socks-port: 7891
 
 # Linux 及 macOS 的 redir 端口
 # redir-port: 7892
@@ -126,7 +133,7 @@ proxies:
   type: vmess
   server: 167.179.116.113
   port: 443
-  uuid: 85ca12f9-899b-480a-af92-19004e9ad7be
+  uuid: 
   alterId: 0
   cipher: auto
   udp: true
@@ -134,7 +141,7 @@ proxies:
   skip-cert-verify: true
   tls-hostname: bigeen.top
   network: ws
-  ws-path: /JfJbaSkaSDD
+  ws-path: /gT3uTQ
   ws-headers: #这一行后面不要写东西
     Host: bigeen.top # 填写伪装域名
 
@@ -206,9 +213,9 @@ proxy-groups:
 - name: "Final"
   type: select
   proxies:
-    - "DIRECT"
     - "PROXY"
-
+    - "DIRECT"
+    
 # Apple 服务代理
 - name: "Apple"
   type: select
@@ -239,7 +246,7 @@ proxy-groups:
 
 # 规则
 rules:
-# Unbreak
+# Unbreak 解除？
 # > Google
 - DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
 - DOMAIN,dl.google.com,DIRECT
@@ -359,7 +366,7 @@ rules:
 - IP-CIDR,47.89.59.182/32,REJECT,no-resolve
 - IP-CIDR,103.49.209.27/32,REJECT,no-resolve
 - IP-CIDR,123.56.152.96/32,REJECT,no-resolve
-# > ChinaTelecom
+# > ChinaTelecom 中国电信
 - IP-CIDR,61.160.200.223/32,REJECT,no-resolve
 - IP-CIDR,61.160.200.242/32,REJECT,no-resolve
 - IP-CIDR,61.160.200.252/32,REJECT,no-resolve
@@ -378,12 +385,12 @@ rules:
 - IP-CIDR,222.186.61.95/32,REJECT,no-resolve
 - IP-CIDR,222.186.61.96/32,REJECT,no-resolve
 - IP-CIDR,222.186.61.97/32,REJECT,no-resolve
-# > ChinaUnicom
+# > ChinaUnicom 中国联通
 - IP-CIDR,106.75.231.48/32,REJECT,no-resolve
 - IP-CIDR,119.4.249.166/32,REJECT,no-resolve
 - IP-CIDR,220.196.52.141/32,REJECT,no-resolve
 - IP-CIDR,221.6.4.148/32,REJECT,no-resolve
-# > ChinaMobile
+# > ChinaMobile 中国移动
 - IP-CIDR,114.247.28.96/32,REJECT,no-resolve
 - IP-CIDR,221.179.131.72/32,REJECT,no-resolve
 - IP-CIDR,221.179.140.145/32,REJECT,no-resolve
@@ -409,7 +416,7 @@ rules:
 # https://www.lizhi.io/blog/40002904
 - DOMAIN-SUFFIX,mackeeper.com,REJECT
 - DOMAIN-SUFFIX,zryydi.com,REJECT
-# > Adobe Flash China Special Edition
+# > Adobe Flash China Special Edition（Adobe Flash中国特别版）
 # https://www.zhihu.com/question/281163698/answer/441388130
 - DOMAIN-SUFFIX,flash.cn,REJECT
 - DOMAIN,geo2.adobe.com,REJECT
@@ -472,8 +479,8 @@ rules:
 - DOMAIN-SUFFIX,zbrushcn.com,REJECT
 - DOMAIN-SUFFIX,zhzzx.com,REJECT
 
-# Global Area Network
-# (GlobalMedia)
+# Global Area Network 
+# (GlobalMedia) 适用于GlobalMedia代理组
 # (Music)
 # > Deezer
 # USER-AGENT,Deezer*,GlobalMedia
@@ -699,14 +706,14 @@ rules:
 - DOMAIN-SUFFIX,youtube.com,GlobalMedia
 - DOMAIN,youtubei.googleapis.com,GlobalMedia
 
-# (HKMTMedia)
+# (HKMTMedia) 适用于HKMTMedia代理组
 # > 愛奇藝台灣站
 - DOMAIN,cache.video.iqiyi.com,HKMTMedia
 # > bilibili
 - DOMAIN-SUFFIX,bilibili.com,HKMTMedia
 - DOMAIN,upos-hz-mirrorakam.akamaized.net,HKMTMedia
 
-# (DNS Cache Pollution Protection)
+# (DNS Cache Pollution Protection) DNS缓存污染保护
 # > Google
 - DOMAIN-SUFFIX,ampproject.org,PROXY
 - DOMAIN-SUFFIX,appspot.com,PROXY
@@ -1098,7 +1105,7 @@ rules:
 - DOMAIN-KEYWORD,porn,PROXY
 - DOMAIN-KEYWORD,wikileaks,PROXY
 
-# (Region-Restricted Access Denied)
+# (Region-Restricted Access Denied) 拒绝区域限制的访问
 - DOMAIN-SUFFIX,apartmentratings.com,PROXY
 - DOMAIN-SUFFIX,apartments.com,PROXY
 - DOMAIN-SUFFIX,bankmobilevibe.com,PROXY
@@ -1148,7 +1155,7 @@ rules:
 - DOMAIN-SUFFIX,zattoo.com,PROXY
 # USER-AGENT,Roam*,PROXY
 
-# (The Most Popular Sites)
+# (The Most Popular Sites) 最受欢迎的网站
 # > Apple
 # >> TestFlight
 - DOMAIN,testflight.apple.com,PROXY
@@ -1169,6 +1176,8 @@ rules:
 - DOMAIN,discord.com,PROXY
 # >> Opensea
 - DOMAIN,opensea.io,PROXY
+# >> sm.ms
+- DOMAIN,sm.ms,PROXY
 # > Google
 - DOMAIN-SUFFIX,abc.xyz,PROXY
 - DOMAIN-SUFFIX,android.com,PROXY
@@ -1288,7 +1297,9 @@ rules:
 - DOMAIN,api.steampowered.com,PROXY
 - DOMAIN,store.steampowered.com,PROXY
 
-# China Area Network
+# China Area Network 中国地区网络
+# cip.cc查ip的，是国内域名。设置为走代理。如果查询结果是国内的ip则说明没走代理。如果查询结果是国外ip，说明走代理，代理生效。
+- DOMAIN-SUFFIX,cip.cc,PROXY
 # > 360
 - DOMAIN-SUFFIX,qhres.com,DIRECT
 - DOMAIN-SUFFIX,qhimg.com,DIRECT
@@ -1440,6 +1451,7 @@ rules:
 - DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
 - DOMAIN-SUFFIX,tenpay.com,DIRECT
 - DOMAIN,file-igamecj.akamaized.net,DIRECT
+- DOMAIN-SUFFIX,meeting.tencent.com,DIRECT
 - IP-CIDR,182.254.116.0/24,DIRECT
 - IP-CIDR,203.205.252.0/23,DIRECT
 - IP-CIDR,203.205.254.0/23,DIRECT
@@ -1698,6 +1710,7 @@ rules:
 # GeoIP China
 - GEOIP,CN,DIRECT
 
+# 如果客户端运行在基于规则模式，如果匹配到上面的规则，就按照规则定义的路由走，否则走Final这个规则组。
 - MATCH,Final
 
 # Clash for Windows
