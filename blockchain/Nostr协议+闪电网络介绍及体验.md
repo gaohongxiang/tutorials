@@ -224,7 +224,7 @@ lightning Address（闪电地址）或 LNURL 并非闪电网络规范BOLT的一�
 
 #### BOLT12与lightning Address的区别
 
-bolt12是闪电网络的规范，是协议层的解决方案，而lightning Address/LNURL是应用层的解决方案。这意味着bolt12具有更好的隐私，较小的集中化风险（DNS）和非技术用户的UX更好，并且不需要像lightning Address/LNURL那样需要Web服务器，TLS证书和域名等外部依赖项。
+bolt12是闪电网络的规范，是协议层的解决方案，而lightning Address/LNURL不是闪电网络的规范，是应用层的解决方案。这意味着bolt12具有更好的隐私，较小的集中化风险（DNS）和非技术用户的UX更好，并且不需要像lightning Address/LNURL那样需要Web服务器，TLS证书和域名等外部依赖项。
 
 bolt11是一长串字符，而lightning Address是可读性很高的标识符。bolt12也是一长串字符吗？能不能也转成可读性很高的标识符？
 
