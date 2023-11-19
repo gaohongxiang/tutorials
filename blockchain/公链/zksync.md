@@ -17,6 +17,28 @@ zksync2.0主网分三个阶段，目前处于第一阶段。
 
 # zksync1.0主网交互
 
+官方交互文档：https://docs.zksync.io/userdocs/tutorials/#add-funds-to-zksync-with-metamask
+
+Discord 中给出的zksync 任务单：
+
+1. 从以太坊主链跨链到zksync 上，做几笔转账。
+2. Mint zksync NFTs
+印几个nft ，教程：[docs.zksync.io/userdocs/tutor…](http://docs.zksync.io/userdocs/tutor%E2%80%A6)
+3. 创建付款链接：
+[checkout.zksync.io/link](http://checkout.zksync.io/link)
+4. 为Gitcoin 捐款，并用zksync 支付:
+[gitcoin.co/grants](http://gitcoin.co/grants)
+5. 在ZigZag上交易几笔
+trade.zigzag.exchange
+6. 在Argent上创建zksync 账户
+Argent wallet 可以直接使用Yearn, Lido dapp
+7. 玩一下这个元宇宙游戏Tevaera
+[tevaera.com](http://tevaera.com/)
+8. 完成这个rss3任务
+[rss3.io](http://rss3.io/)
+9. 导出你的zksync 1.0地址交易记录：
+httns://kexnort netlifv.ann/
+
 下图基本涵盖了zksync1.0主网的主要交互。
 
 ![zksync1.0](https://s2.loli.net/2022/11/04/hcfP56NBdkMD1SC.png)
@@ -106,6 +128,24 @@ gitcoin需要使用github登陆，没有github先注册：https://github.com/
 ![](https://s2.loli.net/2022/11/16/8JreQfHh3MK1snA.jpg)
 ![](https://s2.loli.net/2022/11/16/7iReV5DwJapZzTA.jpg)
 
+## crew3
+- https://zksync.crew3.xyz/questboard
+
+所有答案如下
+
+zkSync Roadmap：
+1. Baby Alpha
+2. 最长选项
+3. Fair Onboarding Alpha
+4. Full Launch Alpha
+5. 最长选项
+
+Open Source is Freedom：
+1. freedom to view, change, fork
+2. Fair Onboarding Alpha
+3. ecosystem
+4. Spicy
+
 ## argent x钱包
 
 # zksync2.0测试网交互
@@ -117,13 +157,20 @@ gitcoin需要使用github登陆，没有github先注册：https://github.com/
 3. 如果以太坊goerli测试网也没eth，可以从bsc测试网[https://testnet.binance.org/faucet-smart](https://testnet.binance.org/faucet-smart) 领bnb，然后去zetachain [https://labs.zetachain.com/leaderboard](https://labs.zetachain.com/leaderboard) 跨链成goerli测试网eth ，然后走zksync2.0官方测试网跨链桥跨链 [https://portal.zksync.io/bridge](https://portal.zksync.io/bridge)
 4. 都不行的话去推特搜，碰运气
 
+获取Goerli ETH测试币方法汇总：
+- https://mirror.xyz/newairdrops.eth/RcXK5YrgCmw30I75kW2kkdKwHVsKHCUuGJ57fOFigdM
+- https://mirror.xyz/noblexx.eth/0TUq9OfFZs-ksUGJMqS57_wjIWclzScbIIArczrEXvo
+
 ## 应用交互
 
 官方列出的应用
 - https://matterlabs.notion.site/zkSync-2-0-Testnet-Applications-e38328bccda7472793024a25e26a1cac
+- https://ecosystem.zksync.io/(所有的)
 
 社区整理应用
 - https://airtable.com/shrt6eK6LvZvUXvOL/tblkUgJJmbCiqr6Fl/viwbsQt9FsWjU64P1
 - https://aramz.super.site/alpha/zksync
 - https://m.defidaonews.com/article/6784356
 
+另外官方推特会不断更新最新的dapp，持续关注并交互
+- https://twitter.com/zksync/status/1592170192808779776

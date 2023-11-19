@@ -1,0 +1,1 @@
+pipx - 为 Python 应用构建独立的安装与运行环境:https://zhuanlan.zhihu.com/p/330676831
