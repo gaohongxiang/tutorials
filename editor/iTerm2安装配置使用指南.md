@@ -1,0 +1,1 @@
+iTerm2安装配置使用指南——保姆级: https://zhuanlan.zhihu.com/p/550022490
