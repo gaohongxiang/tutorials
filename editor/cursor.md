@@ -2,9 +2,9 @@ cursor使用教程
 
 ## 快捷键
 
-command + k 生成代码
-command + l 打开聊天窗口
-command + enter 选中整个代码库作为 Context
+- command + k 生成代码
+- command + l 打开聊天窗口
+- command + enter 选中整个代码库作为 Context
 
 
 ## 引用
