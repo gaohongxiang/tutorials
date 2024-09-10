@@ -4,7 +4,7 @@ cursor使用教程
 
 - command + K 生成代码
 - command + L 打开聊天窗口
-- command + I 打开文件信息
+- command + i 打开文件信息
 - command + enter 选中整个代码库作为 Context
 
 
