@@ -160,6 +160,24 @@ proxies:
      - http/1.1
   # skip-cert-verify: true
 
+# VLESS (需要 Clash Meta/mihomo 内核支持，如 Clash Verge Rev)
+# 从 3X-UI 获取节点信息后填写
+- name: "vless-us"
+  type: vless
+  server: 74.48.90.160        # 服务器 IP
+  port: 31247                  # 端口
+  uuid: 38a96d74-f7a4-4d67-9cf3-f193512c98dd  # UUID
+  network: tcp                 # 传输协议: tcp/ws/grpc
+  tls: false                   # 是否启用 TLS
+  udp: true
+  skip-cert-verify: true
+  # 如果使用 WebSocket，取消注释以下内容：
+  # network: ws
+  # ws-opts:
+  #   path: /your-path
+  #   headers:
+  #     Host: your-domain.com
+
 # 代理组策略
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
 proxy-groups:
@@ -168,6 +186,7 @@ proxy-groups:
 - name: "自动选择快速节点"
   type: url-test
   proxies:
+    - "vless-us"
     - "v2ray"
     - "ss"
     - "ss-obfs"
@@ -203,6 +222,7 @@ proxy-groups:
   type: select
   proxies:
     - "自动选择快速节点"
+    - "vless-us"
     - "v2ray"
     - "ss"
     - "ss-obfs"
