@@ -89,80 +89,84 @@ proxies:
 #   rc4-md5 chacha20-ietf xchacha20
 #   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
-# Shadowsocks
-- name: "ss"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  # udp: true
+# ===== 以下为示例节点，使用时请取消注释并填写真实信息 =====
 
-# Shadowsocks(simple-obfs)
-- name: "ss-obfs"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: obfs
-  plugin-opts:
-      mode: tls
-      host: example.com
+# # Shadowsocks
+# - name: "ss"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   # udp: true
 
-# Shadowsocks(v2ray-plugin)
-- name: "ss-v2ray"
-  type: ss
-  server: server
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: v2ray-plugin
-  plugin-opts:
-    mode: websocket # no QUIC now
-    # tls: true # wss
-    # skip-cert-verify: true
-    # host: bing.com
-    # path: "/"
-    # mux: true
-    # headers:
-    #   custom: value
+# # Shadowsocks(simple-obfs)
+# - name: "ss-obfs"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   plugin: obfs
+#   plugin-opts:
+#       mode: tls
+#       host: example.com
 
-# VMess
-- name: "v2ray"
-  type: vmess
-  server: 167.179.116.113
-  port: 443
-  uuid: 
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  tls-hostname: bigeen.top
-  network: ws
-  ws-path: /gT3uTQ
-  ws-headers: #这一行后面不要写东西
-    Host: bigeen.top # 填写伪装域名
+# # Shadowsocks(v2ray-plugin)
+# - name: "ss-v2ray"
+#   type: ss
+#   server: server
+#   port: 443
+#   cipher: chacha20-ietf-poly1305
+#   password: "password"
+#   plugin: v2ray-plugin
+#   plugin-opts:
+#     mode: websocket # no QUIC now
+#     # tls: true # wss
+#     # skip-cert-verify: true
+#     # host: bing.com
+#     # path: "/"
+#     # mux: true
+#     # headers:
+#     #   custom: value
 
-# Trojan
-- name: "trojan"
-  type: trojan
-  server: 167.179.116.113
-  port: 443
-  password: 09FxdDwZY3K2vzuY
-  network: tcp
-  udp: true
-  tls: true
-  sni: bigeen.top # 填写伪装域名
-  alpn:
-     - h2
-     - http/1.1
-  # skip-cert-verify: true
+# # VMess
+# - name: "v2ray"
+#   type: vmess
+#   server: 167.179.116.113
+#   port: 443
+#   uuid: your-uuid-here
+#   alterId: 0
+#   cipher: auto
+#   udp: true
+#   tls: true
+#   skip-cert-verify: true
+#   tls-hostname: bigeen.top
+#   network: ws
+#   ws-path: /gT3uTQ
+#   ws-headers:
+#     Host: bigeen.top
+
+# # Trojan
+# - name: "trojan"
+#   type: trojan
+#   server: 167.179.116.113
+#   port: 443
+#   password: your-password-here
+#   network: tcp
+#   udp: true
+#   tls: true
+#   sni: bigeen.top
+#   alpn:
+#      - h2
+#      - http/1.1
+#   # skip-cert-verify: true
+
+# ===== 以下为实际使用的节点 =====
 
 # VLESS (需要 Clash Meta/mihomo 内核支持，如 Clash Verge Rev)
 # 从 3X-UI 获取节点信息后填写
-- name: "vless-us"
+- name: "vless-us-la"
   type: vless
   server: 74.48.90.160        # 服务器 IP
   port: 31247                  # 端口
@@ -186,12 +190,8 @@ proxy-groups:
 - name: "自动选择快速节点"
   type: url-test
   proxies:
-    - "vless-us"
-    - "v2ray"
-    - "ss"
-    - "ss-obfs"
-    - "ss-v2ray"
-    - "trojan"
+    - "vless-us-la"
+    # 如有更多节点，在此添加
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
@@ -199,10 +199,7 @@ proxy-groups:
 # - name: "Fallback"
 #   type: fallback
 #   proxies:
-#     - "1"
-#     - "2"
-#     - "3"
-#     - "4"
+#     - "vless-us-la"
 #   url: 'http://www.gstatic.com/generate_204'
 #   interval: 300
 
@@ -210,10 +207,7 @@ proxy-groups:
 # - name: "LoadBalance"
 #   type: load-balance
 #   proxies:
-#     - "1"
-#     - "2"
-#     - "3"
-#     - "4"
+#     - "vless-us-la"
 #   url: 'http://www.gstatic.com/generate_204'
 #   interval: 300
 
@@ -222,12 +216,8 @@ proxy-groups:
   type: select
   proxies:
     - "自动选择快速节点"
-    - "vless-us"
-    - "v2ray"
-    - "ss"
-    - "ss-obfs"
-    - "ss-v2ray"
-    - "trojan"
+    - "vless-us-la"
+    # 如有更多节点，在此添加
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 - name: "Final"
@@ -248,21 +238,14 @@ proxy-groups:
   type: select
   proxies:
     - "PROXY"
-    - "ss"
-    - "ss-obfs"
-    - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
+    - "vless-us-la"
+
 # 大陆流媒体面向港澳台限定服务
 - name: "HKMTMedia"
   type: select
   proxies:
     - "DIRECT"
-    - "ss"
-    - "ss-obfs"
-    - "ss-v2ray"
-    - "v2ray"
-    - "trojan"
+    - "vless-us-la"
 
 # 规则
 rules:
